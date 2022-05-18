@@ -1,6 +1,163 @@
+h1 {
+  font-family: 'Merriweather', sans-serif;
+  text-shadow: 3px 3px 3px #000000;
+  font-size: 3vw;
+}
+
+.header {
+  height: 300px;
+  width: auto;
+  background: url("./img/theme.jpeg") no-repeat center;
+  background-size: 300px;
+  margin: auto;
+}
+
 img {
-    /* float: left; */
-    width:  100px;
-    height: 100px;
-    /* object-fit: cover; */
+  /* float: left; */
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+nav {
+  color: #7b4c19;
+  text-align:  center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  max-width: 1400px;
+}
+
+.navbar-items {
+  display: flex;
+  list-style: none;
+}
+
+#navbar-logo img{
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+nav a {
+  color: #d1a42f;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  text-shadow: 3px 3px 3px #000000;
+  text-decoration: none;
+  padding: 0px 6px;
+}
+
+.navbar .hamburger-icon {
+  display: none;
+}
+
+footer {
+	padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: #d1a42f;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px 20px;
+}
+
+body {
+  background-color: #54191b;
+  color: #d1a42f;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+}
+html {
+  display: inline;
+}
+
+#text-box {
+  border: 1px solid silver;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 2vw;
+  height: 5vw;
+  padding: 0 10px;
+  width: 80%;
+  position: absolute;
+  left: 0px;
+}
+
+#search-button {
+  border: 1px solid silver;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 2vw;
+  height: 5vw;
+  padding: 0 10px;
+  width: 19.5%;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  position: absolute;
+  right:0%;
+  text-align: center;
+}
+
+.page-content {
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  margin: auto;
+  padding: 20px 20px;
+}
+
+aside {
+  float: right;
+  padding: 50px;
+}
+
+.main {
+  position: absolute;
+  left: 50px;
+  width: 60%;
+}
+
+table td, table th {
+  border: 2px solid #422b2b;
+  padding: 8px;
+}
+
+form {
+  float: left;
+}
+
+article {
+  height: 100px;
+  position: relative;
+  left: 0px;
+  color: #d1a42f;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  text-shadow: 3px 3px 3px #000000;
+  text-decoration: none;
+  padding: 0px 6px;
+}
+
+article img{
+  position: absolute;
+  left: 0px;
+}
+
+article h3{
+  position: relative;
+  top: 60%;
+  left: 0px;
+}
+
+summary {
+  display: list-item;
 }

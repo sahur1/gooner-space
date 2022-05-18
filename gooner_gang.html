@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goonerspace - Gooner Gang</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goonerspace - Gooner Gang</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html"><img src="../img/arsenal_logo.png" alt="Arsenal Logo"/></a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="navbar-items">
+      <li>
+        <a href="index.html" id="navbar-logo">
+          <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
+        </a>
+      </li>
+      <li><a href="news.html">NEWS</a></li>
+      <li><a href="matches.html">MATCHES</a></li>
+      <li><a href="players.html">PLAYERS</a></li>
+      <li><a href="tables.html">TABLES</a></li>
+      <li><a href="match_pack.html">MATCH PACK</a></li>
+      <li><a href="gooner_gang.html">GOONER GANG</a></li>
+    </ul>
+  </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="news.html">NEWS</a>
-        <a href="matches.html">MATCHES</a>
-        <a href="players.html">PLAYERS</a>
-        <a href="tables.html">TABLES</a>
-        <a href="match_pack.html">MATCH PACK</a>
-        <a href="gooner_gang.html">GOONER GANG</a>
-    </nav>
-
-    <h2>Gooner Gang</h2>
-    <form>
-        <label>Find a local pub or hangout spot</label>
-        <input name="location" placeholder="Enter Address">
-        <input type="submit" value="Submit">
-    </form>
-
+  <div class="page-content">
+    <div class="main">
+      <h1>Find a Local Pub or Hangout Spot</h1>
+        <form>
+          <input id="text-box" name="location" placeholder="Enter Address">
+          <input id="search-button" type="submit" value="Submit">
+        </form>
+    </div>
+  
     <aside>
-        <article>
-            <h3>Next Fixture</h3>
-            <a href="match_pack.html">
-                <header>Chelsea Vs Arsenal</header>
-                <p>April 20, 2022 - 15:00 | Stamford Bridge</p>
-            </a>
-        </article>
-        
-        <h3>League Standings</h3>
-        <table>
-            <thead>
-                <tr>
-                    <td></td>
-                    <td>Club</td>
-                    <td>P</td>
-                    <td>Pts</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Man City</td>
-                    <td>31</td>
-                    <td>74</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Liverpool</td>
-                    <td>31</td>
-                    <td>73</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Chelsea</td>
-                    <td>30</td>
-                    <td>62</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Spurs</td>
-                    <td>31</td>
-                    <td>57</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Arsenal</td>
-                    <td>30</td>
-                    <td>54</td>
-                </tr>
-            </tbody>
-        </table>
+      <h3>Next Fixture</h3>
+      <a href="match_pack.html">
+          <header>Chelsea Vs Arsenal</header>
+          <p>April 20, 2022 - 15:00 | Stamford Bridge</p>
+      </a>
+      <h3>League Standings</h3>
+      <table>
+        <thead>
+            <tr>
+                <td></td>
+                <td>Club</td>
+                <td>P</td>
+                <td>Pts</td>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Man City</td>
+            <td>31</td>
+            <td>74</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Liverpool</td>
+            <td>31</td>
+            <td>73</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Chelsea</td>
+            <td>30</td>
+            <td>62</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Spurs</td>
+            <td>31</td>
+            <td>57</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Arsenal</td>
+            <td>30</td>
+            <td>54</td>
+          </tr>
+        </tbody>
+      </table>
     </aside>
+  </div>
+  <footer>
+    <p>© 2022 Ritwik Jain Sahu.</p>
+  </footer>
 </body>
 </html>
