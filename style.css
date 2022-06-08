@@ -1,7 +1,11 @@
-h1 {
-  font-family: 'Merriweather', sans-serif;
-  text-shadow: 3px 3px 3px #000000;
-  font-size: 3vw;
+body {
+  background-color: #54191b;
+  color: #d1a42f;
+  font-family: 'Barlow', sans-serif;
+}
+
+h1{
+  font-family: 'Tiro Gurmukhi', serif;
 }
 
 .header {
@@ -13,7 +17,6 @@ h1 {
 }
 
 img {
-  /* float: left; */
   width:  100px;
   height: 100px;
   object-fit: cover;
@@ -26,21 +29,23 @@ nav {
   justify-content: center;
   padding-top: 10px;
   max-width: 1400px;
+  overflow: hidden;
 }
 
-.navbar-items {
-  display: flex;
-  list-style: none;
+#navbar-logo {
+	display: flex;
+	align-items: center;
+	cursor: pointer;/*when mouse goes over this element it will change to a hand pointer to let users know it is clickable*/
 }
 
 #navbar-logo img{
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
   object-fit: cover;
 }
 
 nav a {
+  float: left;
+  display: block;
   color: #d1a42f;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
@@ -54,6 +59,10 @@ nav a {
 }
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 	padding: 10px;
   text-align: center;
 }
@@ -64,16 +73,6 @@ footer a {
   padding: 10px 20px;
 }
 
-body {
-  background-color: #54191b;
-  color: #d1a42f;
-  text-align: center;
-  font-family: 'Barlow', sans-serif;
-}
-html {
-  display: inline;
-}
-
 #text-box {
   border: 1px solid silver;
   border-radius: 5px;
@@ -81,7 +80,7 @@ html {
   font-size: 2vw;
   height: 5vw;
   padding: 0 10px;
-  width: 80%;
+  width: 40%;
   position: absolute;
   left: 0px;
 }
@@ -93,7 +92,7 @@ html {
   font-size: 2vw;
   height: 5vw;
   padding: 0 10px;
-  width: 19.5%;
+  width: 10%;
   text-indent: 0px;
   text-shadow: none;
   text-align: start;
@@ -102,7 +101,7 @@ html {
   letter-spacing: normal;
   word-spacing: normal;
   position: absolute;
-  right:0%;
+  right: 39.9%;
   text-align: center;
 }
 
@@ -111,40 +110,56 @@ html {
   width: auto;
   height: auto;
   overflow: auto;
-  margin: auto;
-  padding: 20px 20px;
+  margin-left: 40px;
+  padding: 10px 10px;
 }
 
 aside {
+  position: relative;
   float: right;
-  padding: 50px;
+  margin-right: 40px;
 }
 
 .main {
   position: absolute;
   left: 50px;
-  width: 60%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  font-family: 'PremierSans-Bold',Arial,'Helvetica Neue',Helvetica,sans-serif;
+  text-align: center;
+  border-spacing: 0px;
+  margin: auto;
 }
 
 table td, table th {
-  border: 2px solid #422b2b;
-  padding: 8px;
+  padding: 5px 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #211616;
+  border-right: 1px solid #000000;
 }
 
 form {
   float: left;
+  position: relative;
 }
 
 article {
-  height: 100px;
+  height: 130px;
   position: relative;
   left: 0px;
   color: #d1a42f;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
-  text-shadow: 3px 3px 3px #000000;
-  text-decoration: none;
-  padding: 0px 6px;
+  padding: 6px 6px;
+  width: 90%;
+  border-bottom: 10px #f9a4a4;
+  /* box-sizing: border-box; */
+  overflow: hidden;
 }
 
 article img{
@@ -152,12 +167,79 @@ article img{
   left: 0px;
 }
 
+article a{
+  text-decoration: none;
+}
+
+article:hover{
+  text-shadow: 3px 3px 3px #000000;
+}
+
 article h3{
   position: relative;
-  top: 60%;
-  left: 0px;
+  top: -10px;
+  left: 110px;
+  color: #d1a42f;
+  font-size: 15px;
+  font-family: 'Tiro Gurmukhi', serif;
+}
+
+article p {
+  position: relative;
+  left: 111px;
+  top: -10px;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
 }
 
 summary {
-  display: list-item;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+  .navbar a:not(:first-child){
+    display: none;
+  }
+
+  .navbar a.hamburger-icon {
+    float: right;
+    display: block;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .navbar.responsive .hamburger-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .main {
+    float: left;
+    width: 100%;
+  }
+  
+  aside {
+    float: left;
+    width: 100%;
+    position: relative;
+    top: 750px;
+    justify-content: center;
+  }
+
+  /* #navbar-logo{
+    display: flex;
+    justify-content: center;
+  } */
 }
