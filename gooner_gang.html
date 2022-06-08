@@ -8,21 +8,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  
   <!-- Navbar -->
-  <nav class="navbar">
-    <ul class="navbar-items">
-      <li>
-        <a href="index.html" id="navbar-logo">
-          <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
-        </a>
-      </li>
-      <li><a href="news.html">NEWS</a></li>
-      <li><a href="matches.html">MATCHES</a></li>
-      <li><a href="players.html">PLAYERS</a></li>
-      <li><a href="tables.html">TABLES</a></li>
-      <li><a href="match_pack.html">MATCH PACK</a></li>
-      <li><a href="gooner_gang.html">GOONER GANG</a></li>
-    </ul>
+  <nav class="navbar" id="myNav">
+    <a href="index.html" id="navbar-logo">
+      <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
+    </a>
+    <a href="news.html">NEWS</a>
+    <a href="matches.html">MATCHES</a>
+    <a href="players.html">PLAYERS</a>
+    <a href="tables.html">TABLES</a>
+    <a href="match_pack.html">MATCH PACK</a>
+    <a href="gooner_gang.html">GOONER GANG</a>
+    <a href="javascript:void(0);" class="hamburger-icon" onclick="makeResponsive()">
+      <i class="fa fa-bars"></i>
+    </a>
   </nav>
 
   <div class="page-content">
@@ -37,8 +38,8 @@
     <aside>
       <h3>Next Fixture</h3>
       <a href="match_pack.html">
-          <header>Chelsea Vs Arsenal</header>
-          <p>April 20, 2022 - 15:00 | Stamford Bridge</p>
+        <header>Chelsea Vs Arsenal</header>
+        <p>April 20, 2022 - 15:00 | Stamford Bridge</p>
       </a>
       <h3>League Standings</h3>
       <table>
