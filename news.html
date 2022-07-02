@@ -11,25 +11,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar" id="myNav">
-    <a href="index.html" id="navbar-logo">
-      <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
-    </a>
+  <a href="index.html" id="navbar-logo">
+    <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
+  </a>
+  <nav class="navbar">
     <a href="news.html">NEWS</a>
-    <a href="matches.html">MATCHES</a>
     <a href="players.html">PLAYERS</a>
     <a href="tables.html">TABLES</a>
     <a href="match_pack.html">MATCH PACK</a>
     <a href="gooner_gang.html">GOONER GANG</a>
-    <a href="javascript:void(0);" class="hamburger-icon" onclick="makeResponsive()">
-      <i class="fa fa-bars"></i>
-    </a>
   </nav>
 
   <div class="page-content">
-    <div class="main col-sm-12 col-md-9">
+    <div class="main">
       <h1>News</h1>
       <div class="grid-item" id="news-1">
         <article class="news-content">
@@ -90,17 +87,17 @@
     <aside>
       <div class="fixtures">
         <h3>Fixtures</h3>
-        <details>
+        <details open>
           <summary>Chelsea Vs Arsenal</summary>
           <time datetime="2022-04-20T14:00:00Z">Wed Apr 20 - 15:00</time>
           | Stamford Bridge
         </details>
-        <details>
+        <details open>
           <summary>Arsenal Vs Manchester United</summary>
           <time datetime="2022-04-23T14:00:00Z">Sat Apr 23 - 15:00</time>
           | Emirates Stadium
         </details>
-        <details>
+        <details open>
           <summary>West Ham Vs Arsenal</summary>
           <time datetime="2022-05-01T14:00:00Z">Sun May 1 - 15:00</time>
           | London Stadium
@@ -108,17 +105,17 @@
       </div>
       <div class="results">
         <h3>Results</h3>
-        <details>
+        <details open>
           <summary>Arsenal 1 - 2 Brighton</summary>
           <time datetime="2022-04-09T14:00:00Z">Sat Apr 9 - 15:00</time>
           | Emirates Stadium
         </details>
-        <details>
+        <details open>
           <summary>Crystal Palace 3 - 0 Arsenal</summary>
           <time datetime="2022-04-04T14:00:00Z">Mon Apr 4 - 15:00</time>
           | Selhurst Park
         </details>
-        <details>
+        <details open>
           <summary>Arsenal 1 - 0 Aston Villa</summary>
           <time datetime="2022-03-19T14:00:00Z">Sat Mar 19 - 15:00</time>
           | London Stadium
@@ -175,15 +172,5 @@
     <p>© 2022 Ritwik Jain Sahu</p>
     <p><a href="mailto:sahur1@mcmaster.ca">Get in Touch!</a></p>
   </footer>
-  <script>
-    function makeResponsive() {
-      var x = document.getElementById("myNav");
-      if (x.className === "navbar") {
-        x.className += " responsive";
-      } else {
-        x.className = "navbar";
-      }
-    }
-  </script>
 </body>
 </html>
