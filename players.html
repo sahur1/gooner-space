@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goonerspace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="index.html" id="navbar-logo">
+    <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
+  </a>
+  <nav class="navbar">
+    <a href="news.html">NEWS</a>
+    <a href="players.html">PLAYERS</a>
+    <a href="tables.html">TABLES</a>
+    <a href="match_pack.html">MATCH PACK</a>
+    <a href="gooner_gang.html">GOONER GANG</a>
+  </nav>
+
+  <div class="page-content">
+    <h1>Players</h1>
+    <div class="filter-options">
+        <select name="sortBy">
+            <option value="" disabled selected>Sort By</option>
+            <option value="wage">Wage</option>
+            <option value="contract">Contract Expiry</option>
+            <option value="age">Age</option>
+            <option value="number">Squad Number</option>
+        </select>
+        <button onclick="sortPlayers()">Sort</button>
+        <select name="position" onchange="filterSelection(value)">
+            <option value="all">Show All</option>
+            <option value="GK">Goalkeepers</option>
+            <option value="DEF">Defenders</option>
+            <option value="MID">Midfielders</option>
+            <option value="ATT">Forwards</option>
+        </select>
+    </div>
+    <div class="player-container">
+      <div class="player-card GK">
+        <img type="button" class="collapsible" src="img/ramsdale_profile.jpeg" alt="Aaron Ramsdale">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Aaron Ramsdale</dd>
+            <dt>Squad number</dt>
+            <dd class="number">32</dd>
+            <dt>Age</dt>
+            <dd class="age">24</dd>
+            <dt>Nationality</dt>
+            <dd>England</dd>
+            <dt>Position</dt>
+            <dd>Goalkeeper</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2025</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£60,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card GK">
+        <img type="button" class="collapsible" src="img/leno_profile.jpeg" alt="Bernd Leno">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Bernd Leno</dd>
+            <dt>Squad number</dt>
+            <dd class="number">1</dd>
+            <dt>Age</dt>
+            <dd class="age">30</dd>
+            <dt>Nationality</dt>
+            <dd>Germany</dd>
+            <dt>Position</dt>
+            <dd>Goalkeeper</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2023</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£100,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card">
+        <img type="button" class="collapsible" src="img/tomi_profile.jpeg" alt="Takehiro Tomiyasu">
+        <div class="player-info" >
+          <dl>
+            <dt>Name</dt>
+            <dd>Takehiro Tomiyasu</dd>
+            <dt>Squad number</dt>
+            <dd class="number">18</dd>
+            <dt>Age</dt>
+            <dd class="age">23</dd>
+            <dt>Nationality</dt>
+            <dd>Japan</dd>
+            <dt>Position</dt>
+            <dd>Right Back</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2025</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£40,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card DEF">
+        <img type="button" class="collapsible" src="img/white_profile.jpeg" alt="Ben White">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Ben White</dd>
+            <dt>Squad number</dt>
+            <dd class="number">4</dd>
+            <dt>Age</dt>
+            <dd class="age">24</dd>
+            <dt>Nationality</dt>
+            <dd>England</dd>
+            <dt>Position</dt>
+            <dd>Centre Back</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2026</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£120,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card DEF">
+        <img type="button" class="collapsible" src="img/gabriel_profile.jpeg" alt="Gabriel">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Gabriel</dd>
+            <dt>Squad number</dt>
+            <dd class="number">6</dd>
+            <dt>Age</dt>
+            <dd class="age">24</dd>
+            <dt>Nationality</dt>
+            <dd>Brazil</dd>
+            <dt>Position</dt>
+            <dd>Centre Back</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2025</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£50,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card DEF">
+        <img type="button" class="collapsible" src="img/tierney_profile.jpeg" alt="Kieran Tierney">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Kieran Tierney</dd>
+            <dt>Squad number</dt>
+            <dd class="number">3</dd>
+            <dt>Age</dt>
+            <dd class="age">25</dd>
+            <dt>Nationality</dt>
+            <dd>Scotland</dd>
+            <dt>Position</dt>
+            <dd>Left Back</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2026</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£110,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card MID">
+        <img type="button" class="collapsible" src="img/partey_profile.jpeg" alt="Thomas Partey">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Thomas Partey</dd>
+            <dt>Squad number</dt>
+            <dd class="number">5</dd>
+            <dt>Age</dt>
+            <dd class="age">28</dd>
+            <dt>Nationality</dt>
+            <dd>Ghana</dd>
+            <dt>Position</dt>
+            <dd>Central Midfielder</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2025</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£200,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card MID">
+        <img type="button" class="collapsible" src="img/odegaard_profile.jpeg" alt="Martin Odegaard">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Martin Odegaard</dd>
+            <dt>Squad number</dt>
+            <dd class="number">8</dd>
+            <dt>Age</dt>
+            <dd class="age">23</dd>
+            <dt>Nationality</dt>
+            <dd>Norway</dd>
+            <dt>Position</dt>
+            <dd>Attacking Midfielder</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2025</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£115,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card MID">
+        <img type="button" class="collapsible" src="img/smithrowe_profile.jpeg" alt="Emile Smith Rowe">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Emile Smith Rowe</dd>
+            <dt>Squad number</dt>
+            <dd class="number">10</dd>
+            <dt>Age</dt>
+            <dd class="age">21</dd>
+            <dt>Nationality</dt>
+            <dd>England</dd>
+            <dt>Position</dt>
+            <dd>Attacking Midfielder</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2026</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£42,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card ATT">
+        <img type="button" class="collapsible" src="img/martinelli_profile.jpeg" alt="Gabriel Martinelli">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Gabriel Martinelli</dd>
+            <dt>Squad number</dt>
+            <dd class="number">35</dd>
+            <dt>Age</dt>
+            <dd class="age">21</dd>
+            <dt>Nationality</dt>
+            <dd>Brazil</dd>
+            <dt>Position</dt>
+            <dd>Left Winger</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2024</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£90,000</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="player-card ATT">
+        <img type="button" class="collapsible" src="img/saka_profile.jpeg" alt="Bukayo Saka">
+        <div class="player-info">
+          <dl>
+            <dt>Name</dt>
+            <dd>Bukayo Saka</dd>
+            <dt>Squad number</dt>
+            <dd class="number">7</dd>
+            <dt>Age</dt>
+            <dd class="age">20</dd>
+            <dt>Nationality</dt>
+            <dd>England</dd>
+            <dt>Position</dt>
+            <dd>Right Winger</dd>
+            <dt>Contract expiry</dt>
+            <dd class="contract">2024</dd>
+            <dt>Weekly wage</dt>
+            <dd class="wage">£30,000</dd>
+          </dl>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <footer>
+    <p>© 2022 Ritwik Jain Sahu</p>
+    <p><a href="mailto:sahur1@mcmaster.ca">Get in Touch!</a></p>
+  </footer>
+  <script src="players.js"></script>
+</body>
+</html>

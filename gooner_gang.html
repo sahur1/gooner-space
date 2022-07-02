@@ -6,33 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goonerspace - Gooner Gang</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap" rel="stylesheet">
 </head>
 <body>
 
   
   <!-- Navbar -->
-  <nav class="navbar" id="myNav">
-    <a href="index.html" id="navbar-logo">
-      <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
-    </a>
+  <a href="index.html" id="navbar-logo">
+    <img src="./img/theme.jpeg" alt="Arsenal Football Club Logo - Cannon facing the left">
+  </a>
+  <nav class="navbar">
     <a href="news.html">NEWS</a>
-    <a href="matches.html">MATCHES</a>
     <a href="players.html">PLAYERS</a>
     <a href="tables.html">TABLES</a>
     <a href="match_pack.html">MATCH PACK</a>
     <a href="gooner_gang.html">GOONER GANG</a>
-    <a href="javascript:void(0);" class="hamburger-icon" onclick="makeResponsive()">
-      <i class="fa fa-bars"></i>
-    </a>
   </nav>
 
   <div class="page-content">
     <div class="main">
-      <h1>Find a Local Pub or Hangout Spot</h1>
-        <form>
+      <h1>Gooner Gang</h1>
+        <label>Find a Local Pub or Hangout Spot</label>
+        <form class="location" action="action_page.php">
           <input id="text-box" name="location" placeholder="Enter Address">
-          <input id="search-button" type="submit" value="Submit">
+          <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
         </form>
+        <div class="forum-top">
+            <h1>Forum</h1>
+        </div>
+        <div class="forum-main">
+            <div class="forum-header">
+            </div>
+            <label>What's on your mind?</label>
+            <form>
+              <textarea required></textarea>
+              <button class="add-button" id="add-thread">Submit</button>
+            </form>
+            <div class="threads">
+            </div>
+            <ol>
+            </ol>
+        </div>
     </div>
   
     <aside>
@@ -87,7 +103,10 @@
     </aside>
   </div>
   <footer>
-    <p>© 2022 Ritwik Jain Sahu.</p>
+    <p>© 2022 Ritwik Jain Sahu</p>
+    <p><a href="mailto:sahur1@mcmaster.ca">Get in Touch!</a></p>
   </footer>
+  <script src="data.js"></script>
+  <script src="forum.js"></script>
 </body>
 </html>
