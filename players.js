@@ -1,25 +1,11 @@
-// javascript code from https://www.w3schools.com/howto/howto_js_collapsible.asp
 // filter and sort algorithms from https://www.w3schools.com/howto/howto_js_filter_elements.asp and
 // https://www.w3schools.com/howto/howto_js_sort_list.asp
 
-// Store list of all collapsible elements
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-// add event listeners on each collapsible
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    // add active class to element on click
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    // set the maxHeight of the collapsible element sibling
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
+$(function(){
+  $(".collapsible").click(function(){
+    $(this).next().toggle("fast");
   });
-}
+});
 
 filterSelection("all");
 function filterSelection(value) {
