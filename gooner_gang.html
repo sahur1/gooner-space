@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="/dist/upvotejs/upvotejs.css">
+  <script src="dist/upvotejs/upvotejs.vanilla.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 </head>
 <body>
 
@@ -29,7 +33,7 @@
     <div class="main">
       <h1>Gooner Gang</h1>
         <label>Find a Local Pub or Hangout Spot</label>
-        <form class="location" action="action_page.php">
+        <form name="location">
           <input id="text-box" name="location" placeholder="Enter Address">
           <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -37,17 +41,17 @@
             <h1>Forum</h1>
         </div>
         <div class="forum-main">
-            <div class="forum-header">
-            </div>
-            <label>What's on your mind?</label>
-            <form>
-              <textarea required></textarea>
-              <button class="add-button" id="add-thread">Submit</button>
-            </form>
-            <div class="threads">
-            </div>
-            <ol>
-            </ol>
+          <div class="forum-header">
+          </div>
+          <label>What's on your mind?</label>
+          <form name="threadcontent">
+            <textarea name="threadcontent"></textarea>
+            <button class="add-button">Submit</button>
+          </form>
+          <div class="threads">
+          </div>
+          <ol>
+          </ol>
         </div>
     </div>
   
