@@ -14,7 +14,7 @@ function addThread(thread) {
         <span class="count">0</span>
         <a class="downvote"></a>
       </div>
-      <a href="/thread.html?${thread.id}">
+      <a href="~ritwiksa/COMP266/thread.html?${thread.id}">
         <h4 class="title">
           ${thread.title}
         </h4>
