@@ -41,7 +41,6 @@ var defaultThreads = [
 ];
 
 // if threads exist in localStorage, get and display else save default threads 
-localStorage.clear();
 var threads = defaultThreads;
 if (localStorage && localStorage.getItem('threads')) {
   threads = JSON.parse(localStorage.getItem('threads'));
