@@ -72,12 +72,6 @@ footer a {
   padding: 10px 20px;
 }
 
-.table-form {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
 #text-box {
   border: 1px solid #d1a42f;
   border-radius: 5px;
@@ -239,7 +233,6 @@ aside a:hover {
 
 .main {
   float: left;
-  left: 50px;
   width: 65%;
   display: flex;
   flex-direction: column;
@@ -281,6 +274,7 @@ li > a{
 
 #league-table {
   float: left;
+  clear: both;
 }
 
 table {
