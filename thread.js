@@ -19,22 +19,22 @@ header.insertAdjacentHTML('beforeend', headerHtml);
 
 // write comment html using comment object
 function addComment(comment) {
-    var commentHtml = `
-        <div class="comment">
-            <div class="comment-meta">
-                <p class="user">
-                    ${comment.author}
-                </p>
-                <p class="comment-ts">
-                    ${new Date(comment.date).toLocaleString()}
-                </p>
-            </div>
-            <div class="comment-content">
-                ${comment.content}
-            </div>
-        </div>
-    `;
-    comments.insertAdjacentHTML('beforeend', commentHtml);
+  var commentHtml = `
+      <div class="comment">
+          <div class="comment-meta">
+              <p class="user">
+                  ${comment.author}
+              </p>
+              <p class="comment-ts">
+                  ${new Date(comment.date).toLocaleString()}
+              </p>
+          </div>
+          <div class="comment-content">
+              ${comment.content}
+          </div>
+      </div>
+  `;
+  comments.insertAdjacentHTML('beforeend', commentHtml);
 }
 
 // add comments for default threads
@@ -44,17 +44,32 @@ for (let comment of thread.comments) {
 }
 
 // insert comment on user submission
-var btn = document.querySelector('button');
-btn.ariaDisabled = true;
-btn.addEventListener('click', function() {
-    var txt = document.querySelector('textarea');
-    var comment = {
-        content: txt.value,
-        date: Date.now(),
-        author: 'Aaron'
-    };
-    addComment(comment);
-    txt.value = '';
-    thread.comments.push(comment);
-    localStorage.setItem('threads', JSON.stringify(threads));
+function insertComment(){
+  var txt = document.querySelector('textarea');
+  var comment = {
+      content: txt.value,
+      date: Date.now(),
+      author: 'Ritwik'
+  };
+  addComment(comment);
+  txt.value = '';
+  thread.comments.push(comment);
+  localStorage.setItem('threads', JSON.stringify(threads));
+}
+
+$(function(){
+  $("form[name=comment]").submit(function(event) {
+    event.preventDefault();
+  }).validate({
+    rules: {
+      comment: "required"
+    },
+    messages: {
+      comment: "Please enter your submission"
+    },
+    submitHandler: function(){
+      insertComment();
+      return false;
+    }
+  });
 });
