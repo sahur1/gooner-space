@@ -9,39 +9,15 @@ $(function(){
 
 filterSelection("all");
 function filterSelection(value) {
-  var elements, iter;
-  elements = document.getElementsByClassName("player-card");
+  var $elements = $(".player-card");
+  //elements = document.getElementsByClassName("player-card");
   if (value == "all") value = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (iter = 0; iter < elements.length; iter++) {
-    removeClass(elements[iter], "show");
-    if (elements[iter].className.indexOf(value) > -1) addClass(elements[iter], "show");
-  }
-}
-
-// Show filtered elements
-function addClass(element, name) {
-  var iter, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (iter = 0; iter < arr2.length; iter++) {
-    if (arr1.indexOf(arr2[iter]) == -1) {
-      element.className += " " + arr2[iter];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function removeClass(element, name) {
-  var iter, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (iter = 0; iter < arr2.length; iter++) {
-    while (arr1.indexOf(arr2[iter]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[iter]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
+  $.each($elements, function(){
+    $(this).removeClass("show");
+    if (this.className.indexOf(value) > -1)
+      $(this).addClass("show");
+  });
 }
 
 function sortPlayers() {
