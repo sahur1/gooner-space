@@ -159,9 +159,12 @@ h4 {
 }
 
 .player-container {
+  float: left;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   clear: both;
+  width: 71%;
 }
 
 .player-card {
@@ -214,6 +217,10 @@ h4 {
 
 select[name=position] {
     margin-left: 20px;
+}
+
+.form-table > table {
+  margin-left: 0;
 }
 
 aside {
@@ -405,4 +412,20 @@ dt::after {
   .add-button {
     width: 30%;
   }
+
+  .player-container {
+    width: 100%;
+  }
+
+  iframe {
+    width: 350px;
+  }
+}
+
+html,
+body,
+#map_canvas {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
