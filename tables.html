@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="tables.js"></script>
 </head>
 <body>
 
@@ -28,25 +30,34 @@
   <div class="page-content">
     <div class="main">
       <h1>Tables</h1>
-      <label for="competitions">Pick the Competition by Season</label>
+      <label for="season">League Standings by Season</label>
       <div class="filter-options">
-        <select name="competitions" id="competitions">
-          <option value="premierLeague">Premier League</option>
-          <option value="championsLeague">Champions League</option>
-          <option value="faCup">FA Cup</option>
-          <option value="leagueCup">League Cup</option>
+        <select name="season" id="season" onchange="loadIntoTable(value)">
+          <option value="2022">2022/23</option>
+          <option value="2021">2021/22</option>
+          <option value="2020">2020/21</option>
+          <option value="2019">2019/20</option>
+          <option value="2018">2018/19</option>
+          <option value="2017">2017/18</option>
+          <option value="2016">2016/17</option>
+          <option value="2015">2015/16</option>
+          <option value="2014">2014/15</option>
+          <option value="2013">2013/14</option>
+          <option value="2012">2012/13</option>
+          <option value="2011">2011/12</option>
+          <option value="2010">2010/11</option>
+          <option value="2009">2009/10</option>
+          <option value="2008">2008/09</option>
+          <option value="2007">2007/08</option>
+          <option value="2006">2006/07</option>
+          <option value="2005">2005/06</option>
+          <option value="2004">2004/05</option>
+          <option value="2003">2003/04</option>
+          <option value="2002">2002/03</option>
+          <option value="2001">2001/02</option>
         </select>
-        <select name="season" id="season">
-          <option value="21/22">2021/22</option>
-          <option value="20/21">2020/21</option>
-          <option value="19/20">2019/20</option>
-          <option value="18/19">2018/19</option>
-          <option value="17/18">2017/18</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
       </div>
-      <div id="league-table">
+      <div>
         <h3>Premier League</h3>
         <table>
           <thead>
@@ -63,248 +74,7 @@
               <th>Points</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Manchester City</td>
-              <td>38</td>
-              <td>29</td>
-              <td>6</td>
-              <td>3</td>
-              <td>99</td>
-              <td>26</td>
-              <td>+73</td>
-              <td>93</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Liverpool</td>
-              <td>38</td>
-              <td>28</td>
-              <td>8</td>
-              <td>2</td>
-              <td>94</td>
-              <td>26</td>
-              <td>+68</td>
-              <td>92</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Chelsea</td>
-              <td>38</td>
-              <td>21</td>
-              <td>11</td>
-              <td>6</td>
-              <td>76</td>
-              <td>33</td>
-              <td>+43</td>
-              <td>74</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Spurs</td>
-              <td>38</td>
-              <td>22</td>
-              <td>5</td>
-              <td>11</td>
-              <td>69</td>
-              <td>40</td>
-              <td>+29</td>
-              <td>71</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Arsenal</td>
-              <td>38</td>
-              <td>22</td>
-              <td>3</td>
-              <td>13</td>
-              <td>61</td>
-              <td>48</td>
-              <td>+13</td>
-              <td>69</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Manchester United</td>
-              <td>38</td>
-              <td>16</td>
-              <td>10</td>
-              <td>12</td>
-              <td>57</td>
-              <td>57</td>
-              <td>0</td>
-              <td>58</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>West Ham United</td>
-              <td>38</td>
-              <td>16</td>
-              <td>8</td>
-              <td>14</td>
-              <td>60</td>
-              <td>51</td>
-              <td>+9</td>
-              <td>56</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Leicester City</td>
-              <td>38</td>
-              <td>14</td>
-              <td>10</td>
-              <td>14</td>
-              <td>62</td>
-              <td>59</td>
-              <td>+3</td>
-              <td>52</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>Brighton and Hove Albion</td>
-              <td>38</td>
-              <td>12</td>
-              <td>15</td>
-              <td>11</td>
-              <td>42</td>
-              <td>44</td>
-              <td>-2</td>
-              <td>51</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>Wolverhampton Wanderers</td>
-              <td>38</td>
-              <td>15</td>
-              <td>6</td>
-              <td>17</td>
-              <td>38</td>
-              <td>43</td>
-              <td>-5</td>
-              <td>51</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>Newcastle United</td>
-              <td>38</td>
-              <td>13</td>
-              <td>10</td>
-              <td>15</td>
-              <td>44</td>
-              <td>62</td>
-              <td>-18</td>
-              <td>49</td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>Crystal Palace</td>
-              <td>38</td>
-              <td>11</td>
-              <td>15</td>
-              <td>12</td>
-              <td>50</td>
-              <td>46</td>
-              <td>+4</td>
-              <td>48</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>Brentford</td>
-              <td>38</td>
-              <td>13</td>
-              <td>7</td>
-              <td>18</td>
-              <td>48</td>
-              <td>56</td>
-              <td>-8</td>
-              <td>46</td>
-            </tr>
-            <tr>
-              <td>14</td>
-              <td>Aston Villa</td>
-              <td>38</td>
-              <td>13</td>
-              <td>6</td>
-              <td>16</td>
-              <td>52</td>
-              <td>54</td>
-              <td>-2</td>
-              <td>45</td>
-            </tr>
-            <tr>
-              <td>15</td>
-              <td>Southampton</td>
-              <td>38</td>
-              <td>9</td>
-              <td>13</td>
-              <td>16</td>
-              <td>43</td>
-              <td>66</td>
-              <td>-23</td>
-              <td>39</td>
-            </tr>
-            <tr>
-              <td>16</td>
-              <td>Everton</td>
-              <td>38</td>
-              <td>11</td>
-              <td>6</td>
-              <td>21</td>
-              <td>43</td>
-              <td>66</td>
-              <td>-23</td>
-              <td>39</td>
-            </tr>
-            <tr>
-              <td>17</td>
-              <td>Leeds United</td>
-              <td>38</td>
-              <td>9</td>
-              <td>11</td>
-              <td>18</td>
-              <td>42</td>
-              <td>79</td>
-              <td>-37</td>
-              <td>38</td>
-            </tr>
-            <tr>
-              <td>18</td>
-              <td>Burnley</td>
-              <td>38</td>
-              <td>7</td>
-              <td>14</td>
-              <td>17</td>
-              <td>34</td>
-              <td>53</td>
-              <td>-19</td>
-              <td>35</td>
-            </tr>
-            <tr>
-              <td>19</td>
-              <td>Watford</td>
-              <td>38</td>
-              <td>6</td>
-              <td>5</td>
-              <td>27</td>
-              <td>34</td>
-              <td>77</td>
-              <td>-43</td>
-              <td>23</td>
-            </tr>
-            <tr>
-              <td>20</td>
-              <td>Norwich City</td>
-              <td>38</td>
-              <td>5</td>
-              <td>7</td>
-              <td>26</td>
-              <td>23</td>
-              <td>84</td>
-              <td>-61</td>
-              <td>22</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </div>
